@@ -18,22 +18,26 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <h1>To-Do List</h1>
-      <div>
+    <div className="app">
+      <h1 className="app-title">To-Do List</h1>
+      <div className="task-input">
         <input
           type="text"
           placeholder="Enter a new task"
           value={newTask}
           onChange={(e) => setNewTask(e.target.value)}
         />
-        <button onClick={addTask}>Add Task</button>
+        <button className="add-button" onClick={addTask}>
+          Add Task
+        </button>
       </div>
-      <ul>
+      <ul className="task-list">
         {tasks.map((task, index) => (
-          <li key={index}>
-            {task}
-            <button onClick={() => removeTask(index)}>Delete</button>
+          <li key={index} className="task-item">
+            <span>{task}</span>
+            <button className="delete-button" onClick={() => removeTask(index)}>
+              Delete
+            </button>
           </li>
         ))}
       </ul>
