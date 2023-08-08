@@ -5,7 +5,7 @@ import Home from './component/home';
 import About from './component/about';
 import Services from './component/services';
 import Contact from './component/contact';
-import { TaskProvider } from './TaskContext'; // Update the path
+import { TaskProvider } from './TaskContext';
 
 const App = () => {
   const [tasks, setTasks] = useState([]);
